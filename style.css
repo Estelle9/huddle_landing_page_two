@@ -32,11 +32,10 @@ header {
     background-color: hsl(193, 100%, 96%);
     height: 5em;
 }
- 
+
 .header__logo,
 .header__button,
 .footer__logo {
-    border: 1px solid #000;
     position: relative;
     margin-top: 1em;
     width: calc(9em + 10vw);
@@ -84,7 +83,6 @@ section,
 }
 
 main {
-    border: 5px solid #000;
     position: relative;
     justify-content: center;
 }
@@ -96,15 +94,9 @@ main {
 }
 
 .introduction {
-    border: 1px solid red;
     background-color: hsl(193, 100%, 96%);
     width: 100%;
     padding: 5em 3em;
-}
-
-.intro__text,
-.intro__img {
-    border: 2px solid green;
 }
 
 .intro__text {
@@ -157,13 +149,11 @@ main {
 .conversation,
 .user,
 .community {
-    border: 1px solid #000;
     border-radius: 0.5em;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 8%);
     background-color: white;
     min-width: 22em;
     width: 90%;
-    /*max-width: 50em;*/
     margin: 1em;
     padding: 3em 1.5em;
 }
@@ -172,14 +162,16 @@ main {
 .together .img,
 .conversation .img,
 .user .img {
-    border: 1px solid black;
     width: 40%;
     min-width: 15em;
     margin-bottom: 2em;
 }
 
+.user {
+    margin-bottom: 13em;
+}
+
 .text {
-    border: 1px solid red;
     max-width: 27.5em;
 }
 
@@ -192,10 +184,6 @@ section h2 {
     color: hsl(208, 11%, 55%);
 }
 
-.user {
-    margin-bottom: 13em;
-}
-
 .community {
     position: absolute;
     bottom: -6em;
@@ -205,32 +193,30 @@ section h2 {
 }
 
 .community__content h2 {
-    font-size: clamp(1rem, -0.7rem + 5vw, 2rem);
+    font-size: clamp(1rem, -0.5rem + 5vw, 1.5rem);
 }
 
 footer {
-    border: 3px solid blue;
     position: relative;
     background-color: hsl(192, 100%, 9%);
     color: white;
+    padding-top: 6em;
 }
 
-footer p,.location span {
+footer p,
+.location span {
     line-height: 1.5em;
 }
 
 .footer__logo {
-    border: 2px solid green;
-    margin: 8em 0 0 2em;
+    margin: 2em;
 }
 
 .footer__main-content {
-    border: 3px solid yellow;
     padding: 2em;
 }
 
 .contacts {
-    border: 3px solid blueviolet;
     margin: 0;
     max-width: 30em;
 }
@@ -260,7 +246,6 @@ footer p,.location span {
 }
 
 .informations {
-    border: 2px solid lightgreen;
     margin: 2em 0 1em;
     min-width: 20.4em;
     max-width: 60%;
@@ -271,12 +256,7 @@ li {
     list-style: none;
 }
 
-.footer__right {
-    border: 2px solid orange;
-}
-
 .socials__icons {
-    border: 2px solid pink;
     margin: 2.5em auto;
     width: 9em;
     word-spacing: 1em;
@@ -301,8 +281,7 @@ li {
 }
 
 .copyright {
-    border: 3px solid red;
-    font-size: clamp(0.7rem, -0.7rem + 5vw, 0.9rem);
+    font-size: clamp(0.7rem, -0.5rem + 5vw, 0.9rem);
     text-align: center;
 }
 
@@ -324,7 +303,9 @@ li {
 }
 
 @media (min-width: 1280px) {
-    header, .introduction {
+
+    header,
+    .introduction {
         padding: 0 3em;
     }
 
@@ -339,8 +320,8 @@ li {
         align-items: center;
     }
 
-    .intro__text h1, .intro__text p {
-        background-color: red;
+    .intro__text h1,
+    .intro__text p {
         text-align: start;
     }
 
@@ -375,7 +356,7 @@ li {
     section:nth-child(3) .illustration__container .text {
         width: 40em;
     }
-    
+
     footer {
         display: flex;
         flex-direction: column;
@@ -388,7 +369,8 @@ li {
         margin-top: 8em;
     }
 
-    .footer__main-content, .informations {
+    .footer__main-content,
+    .informations {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -397,10 +379,6 @@ li {
     .footer__main-content {
         width: 100%;
     }
-
-    .contacts {
-
-    } 
 
     .informations {
         margin: 0;
